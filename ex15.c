@@ -877,6 +877,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
            if(select == 7){
+		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
             }
 
@@ -1171,6 +1172,7 @@ void funcaoBuscar(wins_t *pwin)
                 }
             }
             if(contador == 7)
+		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
         }
         if(kpress == KEY_F(4))
@@ -1548,6 +1550,7 @@ void funcaoalterar(wins_t *pwin, char livro[626])
                 }
             }
             if(contador == 7)
+		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
         }
         if(kpress == KEY_F(4))
