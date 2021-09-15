@@ -584,7 +584,7 @@ void funcaoAdd(wins_t *pwin)
         if(choice == 10)
         {
             if(select == 0){
-                for(r = 0; r < 40; r++)//incia um loop no qual se pode digitar na tela.
+                for(r = 0; r < 200; r++)//incia um loop no qual se pode digitar na tela.
                 {
                     autor[r] = wgetch(pwin->w[pwin->wi]); //pega o input do usuario e atribui ele a string determinada.
                     
@@ -627,7 +627,7 @@ void funcaoAdd(wins_t *pwin)
 				}
             }
             if(select == 1){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 200; r++){
                     titulo[r] = wgetch(pwin->w[pwin->wi]);
                     mvwprintw(pwin->w[pwin->wi], 7, 11+r,"%c", titulo[r]);
                     wrefresh(pwin->w[pwin->wi]);
@@ -670,7 +670,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
             if(select == 2){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 10; r++){
                     ano[r] = wgetch(pwin->w[pwin->wi]);
                     
                     mvwprintw(pwin->w[pwin->wi], 8, 8+r,"%c", ano[r]);
@@ -711,7 +711,7 @@ void funcaoAdd(wins_t *pwin)
                 }
             }
             if(select == 3){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 100; r++){
                     editora[r] = wgetch(pwin->w[pwin->wi]);
                     
                     mvwprintw(pwin->w[pwin->wi], 9, 12+r,"%c", editora[r]);
@@ -755,7 +755,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
             if(select == 4){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 100; r++){
                     local[r] = wgetch(pwin->w[pwin->wi]);
                     
                     mvwprintw(pwin->w[pwin->wi], 10, 9+r,"%c", local[r]);
@@ -799,7 +799,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
              if(select == 5){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 10; r++){
                     edicao[r] = wgetch(pwin->w[pwin->wi]);
                     
                     mvwprintw(pwin->w[pwin->wi], 11, 9+r,"%c", edicao[r]);
@@ -839,7 +839,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
             if(select == 6){
-                 for(r = 0; r < 40; r++){
+                 for(r = 0; r < 20; r++){
                     ISBN[r] = wgetch(pwin->w[pwin->wi]);
                     
                     mvwprintw(pwin->w[pwin->wi], 12, 9+r,"%c", ISBN[r]);
@@ -1077,7 +1077,7 @@ void funcaoBuscar(wins_t *pwin)
         {
             if(contador == 0)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 200; r++)
                 {
                     autores[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],6, 2 + 11 + r,"%c", autores[r]);
@@ -1091,7 +1091,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 1)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 200; r++)
                 {
                     titulo[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],7, 2+ 11 + r,"%c", titulo[r]);
@@ -1105,7 +1105,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 2)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 100; r++)
                 {
                     editora[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],8, 2 + 11 + r,"%c", editora[r]);
@@ -1119,7 +1119,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 3)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 100; r++)
                 {
                     local[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],9, 2 + 11 + r,"%c", local[r]);
@@ -1133,7 +1133,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 4)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 10; r++)
                 {
                     ano[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],10, 2 + 11 + r,"%c", ano[r]);
@@ -1147,7 +1147,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 5)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 10; r++)
                 {
                     edicao[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],11, 2 + 11 + r,"%c", edicao[r]);
@@ -1161,7 +1161,7 @@ void funcaoBuscar(wins_t *pwin)
             }
             if(contador == 6)
             {
-                for(r = 0; r < 40; r++)
+                for(r = 0; r < 20; r++)
                 {
                     ISBN[r] = getch();
                     mvwprintw(pwin->w[pwin->wi],12, 2 + 11 + r,"%c", ISBN[r]);
@@ -1730,4 +1730,3 @@ int centralisar(int cl, char*msg)
 /* ------------------------------------------------------------------------- */
 /* vi: set ai et ts=4 sw=4 tw=0 wm=0 fo=croql : C config for Vim modeline    */
 /* Template by Dr. Beco <rcb at beco dot cc>       Version 20180716.101436   */
-
