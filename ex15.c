@@ -546,7 +546,8 @@ void funcaoAdd(wins_t *pwin)
       wrefresh(pwin->w[pwin->wi]);
       refresh();
 
-
+    if(mensagem_status(*pwin, "Deseja adicionar um livro?", YESNO, "Sim", "Nao"))
+    {
     /* Loop principal */
     while(1) 
     {
@@ -877,7 +878,7 @@ void funcaoAdd(wins_t *pwin)
             }
 
            if(select == 7){
-		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
+             if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
             }
 
@@ -983,6 +984,7 @@ void funcaoAdd(wins_t *pwin)
         }
      }
     }              //fim do while.
+    }
     halfdelay(2);
     return;
 }//fim da funcaoAdd.
@@ -1172,7 +1174,6 @@ void funcaoBuscar(wins_t *pwin)
                 }
             }
             if(contador == 7)
-		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
         }
         if(kpress == KEY_F(4))
@@ -1550,7 +1551,6 @@ void funcaoalterar(wins_t *pwin, char livro[626])
                 }
             }
             if(contador == 7)
-		if(mensagem_status(*pwin, "Certeza que quer perder as alteracoes? ", YESNO, "SIM" , "NAO"))
                 break;
         }
         if(kpress == KEY_F(4))
